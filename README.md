@@ -295,14 +295,51 @@ SwashBuckle – засіб для полегшення роботи програ
 			<p>Наступним кроком буде прописання необхідних залежностей у коді програми для подальшого використання:</p>
 			<img src="image/section5/Python/4.png"/>
 		</li>
-		<li>
-			<code><pre>app = FastAPI()   class DataBase(object):      def __new__(cls):         if not hasattr(cls, 'instance'):             cls.instance = super(DataBase, cls).__new__(cls)         return cls.instance      def __init__(self):         self.connection = None         self.cursor = None         self.__connect()      def __connect(self):         self.connection = pymysql.connect(             host='хост вашого серверу, айпі або localhost',             port=3306, - стандартний порт до бази MySql             user='root', - ім’я юзера, по стандарту root             password='password123', - пароль до бази який задається на початку             database='mydb', - назва конкретної бази(scheme)         )         self.cursor = self.connection.cursor(pymysql.cursors.DictCursor)      def execute(self, command):         self.cursor.execute(command)         result = self.cursor.fetchall()         self.connection.commit()         return result
-</pre></code>
-		</li>
+			<li>
+				<p>Після цього, створюємо клас бази даних з даними по підключенню та оголошенням середовища</p>
+				<pre><code>
+				app = FastAPI() 
+				class DataBase(object): 
+
+				def __new__(cls): 
+					if not hasattr(cls, 'instance'):   
+						cls.instance = super(DataBase, cls).__new__(cls) 
+					return cls.instance  
+
+				def __init__(self):   
+					self.connection = None  
+					self.cursor = None   
+					self.__connect()   
+
+				def __connect(self):  
+					self.connection = pymysql.connect(    
+						host='хост вашого серверу, айпі або localhost',  
+						port=3306, - стандартний порт до бази MySql  
+						user='root', - ім’я юзера, по стандарту root   
+						password='password123', - пароль до бази який задається на початку  
+						database='mydb', - назва конкретної бази(scheme) 
+					) 
+					self.cursor = self.connection.cursor(pymysql.cursors.DictCursor)   
+
+				def execute(self, command):   
+					self.cursor.execute(command)  
+					result = self.cursor.fetchall() 
+					self.connection.commit()  
+					return result
+				</code></pre>
+			</li>
+		
 		<li>
 			<p>Після цього кроку, майже все налаштування рестфул сервісу закінчене, можемо створити просте GET request API</p>
-			<pre><code>@app.get("/api/allusers") – Через знак собачки задається тип регвесту і посилання async def get_users():     db = DataBase() – зазначене використання бази даних     return JSONResponse(db.execute('SELECT * FROM user')) – використання SQL-коду який переводиться зі стрічки у SQL за допомогою методу execute() нашої сутності бази даних.</code></pre>
+			<pre><code>
+			@app.get("/api/allusers") – Через знак собачки задається тип регвесту і посилання 
+			async def get_users(): 
+				db = DataBase() – зазначене використання бази даних 
+				return JSONResponse(db.execute('SELECT * FROM user')) – використання SQL-коду який переводиться зі стрічки у SQL за допомогою методу execute() нашої сутності бази даних.
+				
+			</code></pre>
 		</li>
+		
 		<li>
 			<p>На цьому написання рестфул сервісу майже закінчене, щоб протестувати сервіс, потрібно запустити команду:</p>
 			<pre><code>uvicorn main:app --reload</code></pre>
@@ -310,24 +347,100 @@ SwashBuckle – засіб для полегшення роботи програ
 			<p>На знімку екрану можемо побачити що сервер розгорнувся і ми можемо звертатись до нього за посиланням http://127.0.0.1:8000 , перенесемо запит у постман і спробуємо використати ГЕТ регвест по нашій базі:</p>
 			<img src="image/section5/Python/6.png"/>
 		</li>
+		
 		<li>
 			<p>Таким чином використовуючи SQL код у методі execute(), можемо легко створити рестфул сервіс використовуючи python, для прикладу працюючого сервісу, прикладаємо код до нашої бази, який ви можете використати, але змінивши код під потреби свого серверу:</p>
-			<pre><code>import fastapi from fastapi import FastAPI, Request from fastapi.responses import JSONResponse import pymysql  app = FastAPI()   class DataBase(object):      def __new__(cls):         if not hasattr(cls, 'instance'):             cls.instance = super(DataBase, cls).__new__(cls)         return cls.instance      def __init__(self):         self.connection = None         self.cursor = None         self.__connect()      def __connect(self):         self.connection = pymysql.connect(             host='localhost',             port=3306,             user='root',             password='urpassword123',             database='urdbname',         )         self.cursor = self.connection.cursor(pymysql.cursors.DictCursor)      def execute(self, command):         self.cursor.execute(command)         result = self.cursor.fetchall()         self.connection.commit()         return result   @app.get("/api/allusers") async def get_users():     db = DataBase()     return JSONResponse(db.execute('SELECT * FROM user'))   @app.get('/api/user/{id}') def get_user_by_id(id):     db = DataBase()     result = db.execute(f'SELECT * FROM user WHERE id={id}')     if not result:         raise fastapi.HTTPException(status_code=404)     return JSONResponse(result)   @app.post('/api/adduser', status_code=201) async def add_new_user(req: Request):     req_dict = await req.json()     try:         username = req_dict['username']         email = req_dict['email']         password = req_dict['password']         role = req_dict['Role']     except:         raise fastapi.HTTPException(status_code=400)     db = DataBase()     db.execute(f"INSERT INTO `user`(`username`, `email`, `password`, `Role`) "                f"VALUES ('{username}','{email}','{password}',{role});")     return {'message':'New user added!'}   @app.put('/api/updateuser/{id}') async def update_user(id, req: Request):     req_dict = await req.json()     db = DataBase()     for key in req_dict:         if not db.execute(f'SELECT * FROM user WHERE id={id}'):             raise fastapi.HTTPException(status_code=404)         db.execute(f'UPDATE user SET {key}="{req_dict[key]}" WHERE id={id}')     return {"message":'Updated!'}   @app.delete('/api/deleteuser/{id}') def delete(id):     db = DataBase()     if not db.execute(f'SELECT * FROM user WHERE id={id}'):         raise fastapi.HTTPException(status_code=404)     db.execute(f'DELETE FROM `user` WHERE id={id}')     return {'message':f'User with id={id} deleted'}
-</code></pre>
+			<pre><code>
+			import fastapi 
+			from fastapi import FastAPI, Request 
+			from fastapi.responses import JSONResponse 
+			import pymysql  
+			
+			app = FastAPI()   
+			
+			
+			class DataBase(object):  
+			
+			def __new__(cls): 
+				if not hasattr(cls, 'instance'):  
+					cls.instance = super(DataBase, cls).__new__(cls) 
+				return cls.instance  
+			
+			def __init__(self):  
+				self.connection = None  
+				self.cursor = None   
+				self.__connect()   
+			
+			def __connect(self):  
+				self.connection = pymysql.connect(   
+				host='localhost',      
+				port=3306,             
+				user='root',   
+				password='urpassword123', 
+				database='urdbname',    
+				)  
+				self.cursor = self.connection.cursor(pymysql.cursors.DictCursor)   
+			
+			def execute(self, command):  
+				self.cursor.execute(command)   
+				result = self.cursor.fetchall()  
+				self.connection.commit()     
+				return result   
+			
+			
+			@app.get("/api/allusers") 
+			async def get_users(): 
+				db = DataBase()  
+				return JSONResponse(db.execute('SELECT * FROM user'))   
+			
+			
+			@app.get('/api/user/{id}') 
+			def get_user_by_id(id):  
+				db = DataBase()    
+				result = db.execute(f'SELECT * FROM user WHERE id={id}')  
+				if not result:   
+					raise fastapi.HTTPException(status_code=404) 
+				return JSONResponse(result)   
+			
+			
+			@app.post('/api/adduser', status_code=201) 
+			async def add_new_user(req: Request):   
+				req_dict = await req.json()  
+				try:   
+					username = req_dict['username']  
+					email = req_dict['email']    
+					password = req_dict['password']    
+					role = req_dict['Role']    
+				except:      
+					raise fastapi.HTTPException(status_code=400) 
+				db = DataBase() 
+				db.execute(f"INSERT INTO `user`(`username`, `email`, `password`, `Role`) "  
+				f"VALUES ('{username}','{email}','{password}',{role});") 
+				return {'message':'New user added!'}   
+			
+			
+			@app.put('/api/updateuser/{id}') 
+			async def update_user(id, req: Request): 
+				req_dict = await req.json()   
+				db = DataBase()  
+				for key in req_dict:   
+					if not db.execute(f'SELECT * FROM user WHERE id={id}'):  
+						raise fastapi.HTTPException(status_code=404)   
+					db.execute(f'UPDATE user SET {key}="{req_dict[key]}" WHERE id={id}')  
+				return {"message":'Updated!'}   
+			
+			
+			@app.delete('/api/deleteuser/{id}') 
+			def delete(id): 
+				db = DataBase() 
+				if not db.execute(f'SELECT * FROM user WHERE id={id}'): 
+					raise fastapi.HTTPException(status_code=404) 
+				db.execute(f'DELETE FROM `user` WHERE id={id}') 
+				return {'message':f'User with id={id} deleted'}
+		</code></pre>
 		</li>
-		
 	</ol>
-     
-  <!--<p><span class="two">1.1</span> </p>
-  <img src="image/section5/Python/17_4.jpg"/>
-  <p><span class="two">1.2</span> </p>
-  <img src="image/section5/Python/1_2.jpg"/>
-  <p><span class="three">1.3</span> </p>
-  <img src="image/section5/Python/1_3.png"/>
-  <p><span class="three">1.4</span> </p>
-  <img src="image/section5/Python/1_4.png"/>
-  <p><span class="three">1.5</span> </p>
-  <img src="image/section5/Python/1_5.png"/>-->
+
   </details>
 </div>
 
