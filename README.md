@@ -401,7 +401,7 @@ SwashBuckle – засіб для полегшення роботи програ
 					password = req_dict['password'] 
 					role = req_dict['Role']
 				except:     
-					raise fastapi.HTTPException(status_code=400) 
+					raise fastapi.HTTPException(status_code=400)
 				db = DataBase()
 				db.execute(f"INSERT INTO `user`(`username`, `email`, `password`, `Role`) " 
 				f"VALUES ('{username}','{email}','{password}',{role});")
