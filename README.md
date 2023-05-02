@@ -50,6 +50,7 @@
   <h3>5. Приклади реалізація Restful-сервісу на мовах програмування C#, JavaScript, Python ⚙️</h3>
   <details>
      <summary>Розробка REST API на C# з Entity framework core та Pomelo 🟣</summary>
+
   <p>5.1 Розробка найпростішого рестфул сервіса для роботи з базою даних використовуючи мову програмування C#</p>
 	<p>5.1.1 Після встановлення Visual studio(бажано версія 2022), створюємо проєкт як показано на знімку екрану</p>
   <img src="image/section5/Csharp/1_1.jpg"/>
@@ -254,6 +255,7 @@ SwashBuckle – засіб для полегшення роботи програ
       }
   }
   </pre></code>
+
   </details>
 
   <details>
@@ -276,10 +278,10 @@ SwashBuckle – засіб для полегшення роботи програ
   </details>
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
-  <p><span class="three">1.1</span> </p>
-  <img src="image/section5/Python/1_1.png"/>
-  <p><span class="three">1.2</span> </p>
-  <img src="image/section5/Python/1_2.png"/>
+  <p><span class="two">1.1</span> </p>
+  <img src="image/section5/Python/17_4.jpg"/>
+  <p><span class="two">1.2</span> </p>
+  <img src="image/section5/Python/1_2.jpg"/>
   <p><span class="three">1.3</span> </p>
   <img src="image/section5/Python/1_3.png"/>
   <p><span class="three">1.4</span> </p>
