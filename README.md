@@ -55,33 +55,33 @@
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
-  <p><span class="two">1.1</span> Тепер, коли ми вивчили, що таке REST, і мали швидкий огляд баз даних MySQL, 
+  <p><span class="two">1.</span> Тепер, коли ми вивчили, що таке REST, і мали швидкий огляд баз даних MySQL, 
   давайте поринемо у створення нашого додатку RESTFul. По-перше, нам потрібно створити папку для нашого проекту з командою нижче:</p>
-  <pre><code> mkdir your-direcoty-name && cd your-direcoty-name
-  </code></pre>
+  <pre><code> mkdir your-direcoty-name && cd your-direcoty-name</code></pre>
   <i> Створення нової папки для проекту </i>
-  <img src="image/section5/С#/1_1.png"/>
-  <p><span class="two">1.2</span> </p>
-  <img src="image/section5/С#/1_2.png"/>
-  <p><span class="two">1.3</span> </p>
-  <img src="image/section5/С#/1_3.png"/>
-  <p><span class="two">1.4</span> </p>
-  <img src="image/section5/С#/1_4.png"/>
-  <p><span class="two">1.5</span> </p>
-  <img src="image/section5/С#/1_5.png"/>
+  <p> Наведена вище команда створить папку your-direcoty-name і змінить каталог на цю папку. Далі ми ініціалізуємо новий проект node.js командою нижче: </p>
+  <pre><code> npm init -y</code></pre>
+  <p><span class="two">2.</span> </p>
+  <img src="image/section5/JavaScript/1_2.png"/>
+  <p><span class="two">3.</span> </p>
+  <img src="image/section5/JavaScript/1_3.png"/>
+  <p><span class="two">4.</span> </p>
+  <img src="image/section5/JavaScript/1_4.png"/>
+  <p><span class="two">5.</span> </p>
+  <img src="image/section5/JavaScript/1_5.png"/>
   </details>
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
   <p><span class="three">1.1</span> </p>
-  <img src="image/section5/С#/1_1.png"/>
+  <img src="image/section5/Python/1_1.png"/>
   <p><span class="three">1.2</span> </p>
-  <img src="image/section5/С#/1_2.png"/>
+  <img src="image/section5/Python/1_2.png"/>
   <p><span class="three">1.3</span> </p>
-  <img src="image/section5/С#/1_3.png"/>
+  <img src="image/section5/Python/1_3.png"/>
   <p><span class="three">1.4</span> </p>
-  <img src="image/section5/С#/1_4.png"/>
+  <img src="image/section5/Python/1_4.png"/>
   <p><span class="three">1.5</span> </p>
-  <img src="image/section5/С#/1_5.png"/>
+  <img src="image/section5/Python/1_5.png"/>
   </details>
 </div>
 
