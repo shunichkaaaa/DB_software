@@ -82,9 +82,9 @@
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
   <p><span class="three">1.1</span> </p>
-  <img src="image/section5/Python/1_1.png"/>
+  <img src="image/section5/Python/17_4.png"/>
   <p><span class="three">1.2</span> </p>
-  <img src="image/section5/Python/1_2.png"/>
+  <img src="image/section5/Csharp/1_2.png"/>
   <p><span class="three">1.3</span> </p>
   <img src="image/section5/Python/1_3.png"/>
   <p><span class="three">1.4</span> </p>
