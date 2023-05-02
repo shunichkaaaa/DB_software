@@ -35,6 +35,64 @@
 <!-- Розділ 2 -->
 <div class="section" id="section2">
   <h3>2. Що таке RestAPI та RestfulAPI? Різниця між ними 📲</h3>
+	<table>
+	<thead>
+	<tr>
+	<th>
+	<p style="text-align:center">Factors</p>
+	</th>
+	<th>
+	<p style="text-align:center">REST API</p>
+	</th>
+	<th>
+	<p style="text-align:center">RESTful API</p>
+	</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>Define</td>
+	<td>Develops APIs to enable client-server interaction.</td>
+	<td>Web application follows REST architecture, providing interoperability between different systems.</td>
+	</tr>
+	<tr>
+	<td>Working</td>
+	<td>Uses web services and is based on request and response.</td>
+	<td>Working is completely based on REST applications.</td>
+	</tr>
+	<tr>
+	<td>Nature</td>
+	<td>Highly adaptable and user-friendly</td>
+	<td>Too flexible</td>
+	</tr>
+	<tr>
+	<td>Protocol</td>
+	<td>Strong protocol and is more secure, built-in architecture layers.</td>
+	<td>Has a transport protocol, is less secure as compared to REST.</td>
+	</tr>
+	<tr>
+	<td>Architecture</td>
+	<td>Has a cacheable, client-server, stateless, layer system with a uniform interface.</td>
+	<td>All features of REST architecture along with some additional unique features.</td>
+	</tr>
+	<tr>
+	<td>Format of Data</td>
+	<td>Format of data is based on HTTP.</td>
+	<td>Format of data is based on HTTP, text, and JSON.</td>
+	</tr>
+	<tr>
+	<td>Bandwidth</td>
+	<td>This consumes minimum bandwidth.</td>
+	<td>This consumes less bandwidth.</td>
+	</tr>
+	<tr>
+	<td>Cache</td>
+	<td>It represents cacheable and non-cacheable data and displaces the non-cacheable data when not required.</td>
+	<td>The client can access cacheable information anytime and anywhere.</td>
+	</tr>
+	</tbody>
+	</table>
+	
 
 <!-- Розділ 3 -->
 <div class="section" id="section3">
