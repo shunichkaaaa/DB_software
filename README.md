@@ -61,14 +61,14 @@
   <i> Створення нової папки для проекту </i>
   <p> Наведена вище команда створить папку your-direcoty-name і змінить каталог на цю папку. Далі ми ініціалізуємо новий проект node.js командою нижче: </p>
   <pre><code> npm init -y</code></pre>
-  <p><span class="two">2.</span> </p>
-  <img src="image/section5/JavaScript/1_2.png"/>
+  <p><span class="two">2.</span> Нарешті, давайте подивимося на нашу структуру проекту. В кінці цього підручника, наша структура проекту буде виглядати так:</p>
+  <img src="image/section5/JavaScript/1.jpg"/>
   <p><span class="two">3.</span> </p>
-  <img src="image/section5/JavaScript/1_3.png"/>
+  <img src="image/section5/JavaScript/2_1.png"/>
   <p><span class="two">4.</span> </p>
-  <img src="image/section5/JavaScript/1_4.png"/>
+  <img src="image/section5/JavaScript/2_2.png"/>
   <p><span class="two">5.</span> </p>
-  <img src="image/section5/JavaScript/1_5.png"/>
+  <img src="image/section5/JavaScript/2_3.png"/>
   </details>
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
