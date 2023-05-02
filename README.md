@@ -50,16 +50,16 @@
   <h3>5. Приклади реалізація Restful-сервісу на мовах програмування C#, JavaScript, Python ⚙️</h3>
   <details>
      <summary>Розробка REST API на C# з Entity framework core та Pomelo 🟣</summary>
-  <p><span class="one">1.1</span> </p>
-  <img src="image/section5/С#/1_1.jpg"/>
-  <p><span class="one">1.2</span> </p>
-  <img src="image/section5/С#/1_2.jpg"/>
-  <p><span class="one">1.3</span> </p>
-  <img src="image/section5/С#/2_1.jpg"/>
-  <p><span class="one">1.4</span> </p>
-  <img src="image/section5/С#/2_2.jpg"/>
-  <p><span class="one">1.5</span> </p>
-  <img src="image/section5/С#/3.jpg"/>
+  <p><span class="two">1.1</span> </p>
+  <img src="image/section5/Csharp/1_1.jpg"/>
+  <p><span class="two">1.2</span> </p>
+  <img src="image/section5/Csharp/1_2.jpg"/>
+  <p><span class="two">1.3</span> </p>
+  <img src="image/section5/Csharp/2_1.jpg"/>
+  <p><span class="two">1.4</span> </p>
+  <img src="image/section5/Csharp/2_2.jpg"/>
+  <p><span class="two">1.5</span> </p>
+  <img src="image/section5/Csharp/3.jpg"/>
   </details>
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
@@ -81,10 +81,10 @@
   </details>
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
-  <p><span class="three">1.1</span> </p>
-  <img src="image/section5/Python/1_1.png"/>
-  <p><span class="three">1.2</span> </p>
-  <img src="image/section5/Python/1_2.png"/>
+  <p><span class="two">1.1</span> </p>
+  <img src="image/section5/Python/17_4.jpg"/>
+  <p><span class="two">1.2</span> </p>
+  <img src="image/section5/Python/1_2.jpg"/>
   <p><span class="three">1.3</span> </p>
   <img src="image/section5/Python/1_3.png"/>
   <p><span class="three">1.4</span> </p>
