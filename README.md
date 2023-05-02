@@ -297,6 +297,24 @@ SwashBuckle – засіб для полегшення роботи програ
   <p><span class="two">3.</span> Нарешті, ми налаштуємо нашу програму для прослуховування порту 3000.</p>
   <img src="image/section5/JavaScript/2_3.jpg"/>
   <pre><p><i>	Вибір порту 3000 для нашого порту прослуховування. </i></p></pre>
+  <h4>IIІ. Підключення до MySQL</h4>
+  <p> Тепер у нас налаштований Express сервер. Давайте перейдемо до налаштування нашої бази даних MySQL.</p>
+  <p><span class="two">1.</span> Створіть папку service у нашому кореневому каталозі проекту. У папці service створіть файл db.js і 
+  додайте до нього наступні фрагменти коду нижче.</p>
+  <p> <b style="color:red;">УВАГА!</b> назву бази даних "mydb" замініть назвою власної БД; пароль задайте також свій (який Ви задавали при встановленні MySQL)</p>
+  <img src="image/section5/Python/3_1.jpg"/>
+  <pre><p><i> Підключення до бази даних MySQL методом createConnection. </i></p></pre>
+  <p> Наведений вище код буде підключатися до нашої бази даних MySQL за допомогою методу MySQL createConnection. Метод createConnection приймає хост, 
+  ім'я користувача, пароль і ім'я бази даних як необхідні параметри.</p>
+  <h4>IV. Створення контролерів додатка</h4>
+  <p><span class="two">1.</span> </p>
+  <img src="image/section5/Python/4_1.jpg"/>
+  <p><span class="three">2.</span> </p>
+  <img src="image/section5/Python/4_2.png"/>
+  <p><span class="three">3.</span> </p>
+  <img src="image/section5/Python/4_3.png"/>
+  <p><span class="three">4.</span> </p>
+  <img src="image/section5/Python/4_4.png"/>
   </details>
 
   <details>
