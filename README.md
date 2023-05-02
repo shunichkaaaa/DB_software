@@ -42,42 +42,46 @@
   <details>
      <summary>Розробка REST API на C# з Entity framework core та Pomelo 🟣</summary>
   <p><span class="one">1.1</span> </p>
-  <img src="image/section5/С#/1_1.jpg"/>
+  <img src="image/section5/С#/1_1.png"/>
   <p><span class="one">1.2</span> </p>
-  <img src="image/section5/С#/1_2.jpg"/>
+  <img src="image/section5/С#/1_2.png"/>
   <p><span class="one">1.3</span> </p>
-  <img src="image/section5/С#/1_3.jpg"/>
+  <img src="image/section5/С#/1_3.png"/>
   <p><span class="one">1.4</span> </p>
-  <img src="image/section5/С#/1_4.jpg"/>
+  <img src="image/section5/С#/1_4.png"/>
   <p><span class="one">1.5</span> </p>
-  <img src="image/section5/С#/1_5.jpg"/>
+  <img src="image/section5/С#/1_5.png"/>
   </details>
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
-  <p><span class="two">1.1</span> </p>
-  <img src="image/section5/С#/1_1.jpg"/>
+  <p><span class="two">1.1</span> Тепер, коли ми вивчили, що таке REST, і мали швидкий огляд баз даних MySQL, 
+  давайте поринемо у створення нашого додатку RESTFul. По-перше, нам потрібно створити папку для нашого проекту з командою нижче:</p>
+  <pre><code> mkdir your-direcoty-name && cd your-direcoty-name
+  </code></pre>
+  <i> Створення нової папки для проекту </i>
+  <img src="image/section5/С#/1_1.png"/>
   <p><span class="two">1.2</span> </p>
-  <img src="image/section5/С#/1_2.jpg"/>
+  <img src="image/section5/С#/1_2.png"/>
   <p><span class="two">1.3</span> </p>
-  <img src="image/section5/С#/1_3.jpg"/>
+  <img src="image/section5/С#/1_3.png"/>
   <p><span class="two">1.4</span> </p>
-  <img src="image/section5/С#/1_4.jpg"/>
+  <img src="image/section5/С#/1_4.png"/>
   <p><span class="two">1.5</span> </p>
-  <img src="image/section5/С#/1_5.jpg"/>
+  <img src="image/section5/С#/1_5.png"/>
   </details>
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
   <p><span class="three">1.1</span> </p>
-  <img src="image/section5/С#/1_1.jpg"/>
+  <img src="image/section5/С#/1_1.png"/>
   <p><span class="three">1.2</span> </p>
-  <img src="image/section5/С#/1_2.jpg"/>
+  <img src="image/section5/С#/1_2.png"/>
   <p><span class="three">1.3</span> </p>
-  <img src="image/section5/С#/1_3.jpg"/>
+  <img src="image/section5/С#/1_3.png"/>
   <p><span class="three">1.4</span> </p>
-  <img src="image/section5/С#/1_4.jpg"/>
+  <img src="image/section5/С#/1_4.png"/>
   <p><span class="three">1.5</span> </p>
-  <img src="image/section5/С#/1_5.jpg"/>
+  <img src="image/section5/С#/1_5.png"/>
   </details>
 </div>
 
