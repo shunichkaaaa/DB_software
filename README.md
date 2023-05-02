@@ -19,13 +19,13 @@
 	та пояснено, як користувач взаємодіє з ним через HTTP запити. Для кращої візуалізації матеріалу будуть приведенті відповідні фото та діаграми. </p>
 	<p>Також, для того, щоб скористатися цим керівництвом вам потрібно становити відповідне IDE для кожної з мов програмування, а саме:</p>
 	<ul>
-		<li>Для C# - <a href="https://visualstudio.microsoft.com/vs/">(Visual Studio(2022));</li>
+		<li>Для C# - <a href="https://visualstudio.microsoft.com/vs/">Visual Studio(2022)</a>;</li>
 		<li>Для JavaScript - Visual Studio Code;</li>
-		<li>Для Python - <a href="https://www.jetbrains.com/pycharm/PythPyCharm">(PyCharm) або Visual Studio(2022)</li>
+		<li>Для Python - <a href="https://www.jetbrains.com/pycharm/PythPyCharm">PyCharm</a> або Visual Studio(2022)</li>
     </ul>
     <p>Для тестування створеного Restful- сервісу має бути використана:</p>
     <ul>
-        <li><a href="https://www.postman.com/downloads/">(Postman API Platform)</li>
+        <li><a href="https://www.postman.com/downloads/">Postman API Platform</a></li>
 	</ul>
   </div>
 </div>
@@ -418,7 +418,7 @@ exports.deleteUser = (req, res, next) => {
   <p> Наведений вище код створює клас AppError, який розширює вбудований клас Error. Потім ми передамо повідомлення про помилку та статус конструктору класу Error. 
   Далі ми перевіримо, який тип помилки стався в нашій програмі з початком коду стану, і додамо помилку в трасування стека помилок.</p>
   <p><span class="three">2.</span> Далі відкрийте файл errorHandler.js і додайте фрагмент коду нижче:</p>
-  <img src="image/section5/JavaScript/5_2.png"/>
+  <img src="image/section5/JavaScript/5_2.jpg"/>
   <pre><p><i> Файл errorHandler.js. </i></p></pre>
   <p> Наведений вище код перевірить можливі помилки в нашому додатку і відправить клієнту відповідний код помилки і стану, не ламаючи нашу програму. </p>
   <h4>VІ. Створення routes</h4>
@@ -447,14 +447,6 @@ exports.deleteUser = (req, res, next) => {
   <p> Примітка: впевніться, що в розділі Headers у Вас виставлений наступний content-type header:</p>
   <img src="image/section5/JavaScript/8_3.jpg"/>
   <p> Він визначає формат обєкту, щоб серврев знав, як його передавати.</p>
-  <ul>
-      <li>Get Route: щоб отримати всі користувачів в нашій базі даних.</li>
-      <li>Post Route: щоб додати нового користувача в нашу базу даних.</li>
-      <li>Get Route: щоб отримати користувача за його id.</li>
-      <li>Put Route: оновити дані користувача за id.</li>
-      <li>Delete Route: щоб вилучити користувача за ідентифікатором.</li>
-  </ul>  
-  <p> Потім експортуємо route object. </p>
   </details>
 
   <details>
