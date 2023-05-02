@@ -73,7 +73,7 @@
   <p><span class="two">2.</span> Нарешті, давайте подивимося на нашу структуру проекту. В кінці цього підручника, наша структура проекту буде виглядати так:</p>
   <img src="image/section5/JavaScript/1.jpg"/>
   <p><span class="two">3.</span> </p>
-  <img src="image/section5/Сsharp/2_1.jpg"/>
+  <img src="image/section5/Python/17_4.jpg"/>
   <p><span class="two">4.</span> </p>
   <img src="image/section5/JavaScript/2_2.jpg"/>
   <p><span class="two">5.</span> </p>
