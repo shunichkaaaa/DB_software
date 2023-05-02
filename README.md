@@ -51,15 +51,15 @@
   <details>
      <summary>Розробка REST API на C# з Entity framework core та Pomelo 🟣</summary>
   <p><span class="one">1.1</span> </p>
-  <img src="image/section5/С#/1_1.jpg"/>
+  <img src="image/section5/Сsharp/1_1.jpg"/>
   <p><span class="one">1.2</span> </p>
-  <img src="image/section5/С#/1_2.jpg"/>
+  <img src="image/section5/Сsharp/1_2.jpg"/>
   <p><span class="one">1.3</span> </p>
-  <img src="image/section5/С#/2_1.jpg"/>
+  <img src="image/section5/Сsharp/2_1.jpg"/>
   <p><span class="one">1.4</span> </p>
-  <img src="image/section5/С#/2_2.jpg"/>
+  <img src="image/section5/Сsharp/2_2.jpg"/>
   <p><span class="one">1.5</span> </p>
-  <img src="image/section5/С#/3.jpg"/>
+  <img src="image/section5/Сsharp/3.jpg"/>
   </details>
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
