@@ -229,42 +229,31 @@ SwashBuckle – засіб для полегшення роботи програ
   <img src="image/section5/Csharp/7_3.jpg"/>
   <p>8.	Спочатку для використання Swagger потрібно налаштувати стартовий файл проекту, для вашої зручності ви можете взяти код з нашого стартового файлу, та змінити декілька полів, якщо хочете дізнатись більше про конфігурацію Swagger завітайте до сайту <a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/">(Посилання)</a></p>
   <pre><code>using Microsoft.OpenApi.Models;
-
   var builder = WebApplication.CreateBuilder(args);
-
   builder.Services.AddControllers();
   builder.Services.AddEndpointsApiExplorer();
   builder.Services.AddSwaggerGen(c =>
   {
       c.SwaggerDoc("v1", new OpenApiInfo { Title = "YourProjectName", Version = "v1" });
   });
-
   var app = builder.Build();
-
   if (app.Environment.IsDevelopment())
   {
       app.UseSwagger();
       app.UseSwaggerUI();
   }
-
   app.UseSwagger();
   app.UseSwaggerUI(c =>
   {
       c.SwaggerEndpoint("/swagger/v1/swagger.json", "YourProjectName V1");
   });
-
   app.UseHttpsRedirection();
-
   app.UseAuthorization();
-
   app.MapControllers();
-
   app.Run();
-
   </code></pre>
   </details>
   
- 
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
