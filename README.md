@@ -212,11 +212,56 @@
   <img src="image/section5/Csharp/4_2.jpg"/>
   <p>5. Ви можете порівняти початкові файли зі знімками на екрані</p>
 	<ul>
-		<li>Перейменуємо контролер та видалимо зайве з нього.</li>
-    <img src="image/section5/Csharp/5_1.jpg"/>
-    <img src="image/section5/Csharp/5_2.jpg"/>
-    <li>Приведіть контролер до такої початкової форми, щоб мати змогу потім будувати його без написання його з нуля.</li>
+	     <li>Перейменуємо контролер та видалимо зайве з нього.</li>
+             <img src="image/section5/Csharp/5_1.jpg"/>
+             <img src="image/section5/Csharp/5_2.jpg"/>
+             <li>Приведіть контролер до такої початкової форми, щоб мати змогу потім будувати його без написання його з нуля.</li>
  	</ul> 
+  <p>6. Почнемо підготовлювати бібліотеки які потрібна нам для безпосередньої роботи з базою даних. Тиснемо на файл проекту, та у меню обираємо кнопку «Manage NuGetPackages»</p>
+  <img src="image/section5/Csharp/6.jpg"/>
+  <p>7. У менеджері нугет пакетів, маємо обрати зверху вкладку Browse та встановити три пакети: Pomelo, Entity framework та Swashbuckle</p>
+	<p>Pomelo – пакет який дозволяє працювати з базами даних створених за допомогою MySQL
+Entity framework core – спеціальна бібліотека засобів для безпосереднього спілкування з базою (цей фреймворк перетворює код C# у SQL)
+SwashBuckle – засіб для полегшення роботи програміста, пропонує нам простий юзер інтерфейс при роботі з API під назвою Swagger, дуже зручний при розробці інструмент(швидка альтернатива PostMan)
+  </p>
+  <img src="image/section5/Csharp/7_1.jpg"/>
+  <img src="image/section5/Csharp/7_2.jpg"/>
+  <img src="image/section5/Csharp/7_3.jpg"/>
+  <p>8.	Спочатку для використання Swagger потрібно налаштувати стартовий файл проекту, для вашої зручності ви можете взяти код з нашого стартового файлу, та змінити декілька полів, якщо хочете дізнатись більше про конфігурацію Swagger завітайте до сайту <a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/">(Посилання)</a></p>
+  <pre><code>using Microsoft.OpenApi.Models;
+
+  var builder = WebApplication.CreateBuilder(args);
+
+  builder.Services.AddControllers();
+  builder.Services.AddEndpointsApiExplorer();
+  builder.Services.AddSwaggerGen(c =>
+  {
+      c.SwaggerDoc("v1", new OpenApiInfo { Title = "YourProjectName", Version = "v1" });
+  });
+
+  var app = builder.Build();
+
+  if (app.Environment.IsDevelopment())
+  {
+      app.UseSwagger();
+      app.UseSwaggerUI();
+  }
+
+  app.UseSwagger();
+  app.UseSwaggerUI(c =>
+  {
+      c.SwaggerEndpoint("/swagger/v1/swagger.json", "YourProjectName V1");
+  });
+
+  app.UseHttpsRedirection();
+
+  app.UseAuthorization();
+
+  app.MapControllers();
+
+  app.Run();
+
+  </code></pre>
   </details>
   
   
