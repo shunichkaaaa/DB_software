@@ -153,7 +153,7 @@
   </dd>
   <dt id="put"><code>PUT</code></dt>
   <dd>
-    <p>Метод <code>PUT</code> замінює всі поточні представлення цільового ресурсу на відане навантаження запиту.</p>
+    <p>Метод <code>PUT</code> замінює всі поточні представлення цільового ресурсу на віддане навантаження запиту.</p>
   </dd>
   <dt id="delete"><code>DELETE</code></dt>
   <dd>
@@ -752,9 +752,9 @@ exports.deleteUser = (req, res, next) => {
 <div class="section" id="section6">
   <h3>6. Корисні посилання 🔗</h3>
   <ol>
-	<li><a href="https://dev.mysql.com/downloads/mysql/">Завантаження MySQL Universal Installer</a></li>
-	<li><a href="https://www.youtube.com/playlist?list=PLXr7EDDqEOkYiUDqyM3yMg4K2abjEyagl">Плейліст лекцій БД 2023</a></li>
-	<li><a href="https://github.com/YehorSeniuk/IOO">Репозиторій проекту IOO</a></li>
-	<li><a href="https://yehorseniuk.github.io/IOO/">Gh-pages проекту IOO</a></li>
+	<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP запити</a></li>
+	<li><a href="https://youtu.be/SLwpqD8n3d0">ВІдео: що таке RestAPI</a></li>
+	<li><a href="https://loopback.io/doc/en/lb4/Concepts.html">Структура типових API та Microservice додатків</a></li>
+	<li><a href="https://github.com/shunichkaaaa/edu_db_labs_IO-12_Group-4">Репозиторій нашої команди</a></li>
   </ol>
 </div>
