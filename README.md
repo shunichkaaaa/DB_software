@@ -1,7 +1,6 @@
 # DB-2023-RestAPI
 
 <div class="container">
-  
   <div class="content">
   <h2>Короткий зміст</h2>
   <ol>
@@ -26,7 +25,6 @@
     <p>Для тестування створеного Restful- сервісу має бути використана:</p>
     <ul>
         <li><a href="https://www.postman.com/downloads/">Postman API Platform</a></li>
-
 	</ul>
   </div>
 </div>
