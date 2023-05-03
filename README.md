@@ -171,6 +171,13 @@
     <p>Метод <code>PATCH</code> застосовує часткові модифікації до ресурсу.</p>
   </dd>
 </dl>
+<p>Усі ці методи, окрім <code>TRACE</code>, сумісні із усіма популярними десктопними браузерами та їх мобільними версіями, як от</p>
+	<ul><li><strong>Chrome</strong></li>
+	<li><strong>Edge</strong></li>
+	<li><strong>Firefox</strong></li>
+	<li><strong>Opera</strong></li>
+	<li><strong>Safari</strong></li></ul>
+<p><strong>Функціональність методу <code>TRACE</code> зловмисники можуть використати для доступу до інформації в HTTP заголовках, таких як кукі та дані автентифікації, тому цей метод не підтримується в більшості сучасних браузерів.</strong></p>
 
 <!-- Розділ 4 -->
 <div class="section" id="section4">
