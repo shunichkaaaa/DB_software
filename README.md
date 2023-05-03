@@ -419,7 +419,6 @@ SwashBuckle – засіб для полегшення роботи програ
       }
   }
   </pre></code>
-
   </details>
 
   <details>
