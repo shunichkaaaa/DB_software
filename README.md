@@ -443,6 +443,8 @@ exports.deleteUser = (req, res, next) => {
 		</li>	
 		<li>
 			<p>Таким чином використовуючи SQL код у методі execute(), можемо легко створити рестфул сервіс використовуючи python, для прикладу працюючого сервісу, прикладаємо код до нашої бази, який ви можете використати, але змінивши код під потреби свого серверу:</p>
+		</li>	
+	</ol>
 			<pre><code>
 			import fastapi
 			from fastapi import FastAPI, Request
@@ -514,8 +516,6 @@ exports.deleteUser = (req, res, next) => {
 				db.execute(f'DELETE FROM `user` WHERE id={id}')
 				return {'message':f'User with id={id} deleted'}
 		</code></pre>
-		</li>
-	</ol>
 
   </details>
 </div>
