@@ -330,7 +330,7 @@ SwashBuckle – засіб для полегшення роботи програ
   namespace EduDBlab6.Controllers
   {
       [ApiController]
-      [Route("[controller]")]
+      [Route(&quot;[controller]&quot;)]
       public class UserController : ControllerBase
       {
           private readonly MydbContext _context;
@@ -341,31 +341,31 @@ SwashBuckle – засіб для полегшення роботи програ
           }
 
           [HttpGet()]
-          public async Task<IActionResult> GetUser()
+          public async Task&lt;IActionResult&gt; GetUser()
           {
               var users = await _context.Users.ToListAsync();
 
               return Ok(users);
           }
 
-          [HttpGet("id")]
-          public async Task<IActionResult> GetUserById(int id)
+          [HttpGet(&quot;id&quot;)]
+          public async Task&lt;IActionResult&gt; GetUserById(int id)
           {
-              var user = await _context.Users.Where(x => x.Id == id).FirstOrDefaultAsync();
+              var user = await _context.Users.Where(x =&gt; x.Id == id).FirstOrDefaultAsync();
 
               if (user == null)
-                  throw new Exception($"User with id {id} wasn't found in the database");
+                  throw new Exception($&quot;User with id {id} wasn't found in the database&quot;);
 
               return Ok(user);
           }
 
           [HttpPost]
-          public async Task<IActionResult> AddUser(UserRequestModel user)
+          public async Task&lt;IActionResult&gt; AddUser(UserRequestModel user)
           {
-              var existingUser = await _context.Users.Where(x => x.Id == user.Id).FirstOrDefaultAsync();
+              var existingUser = await _context.Users.Where(x =&gt; x.Id == user.Id).FirstOrDefaultAsync();
 
               if (existingUser != null)
-                  throw new Exception("User is not found");
+                  throw new Exception(&quot;User is not found&quot;);
 
               var newUser = new User()
               {
@@ -383,13 +383,13 @@ SwashBuckle – засіб для полегшення роботи програ
               return Ok(newUser);
           }
 
-          [HttpPut("update")]
-          public async Task<IActionResult> UpdateUser(UserRequestModel user)
+          [HttpPut(&quot;update&quot;)]
+          public async Task&lt;IActionResult&gt; UpdateUser(UserRequestModel user)
           {
-              var existingUser = await _context.Users.Where(x => x.Id == user.Id).FirstOrDefaultAsync();
+              var existingUser = await _context.Users.Where(x =&gt; x.Id == user.Id).FirstOrDefaultAsync();
 
               if (existingUser == null)
-                  throw new Exception("The user with such id doesn't exist");
+                  throw new Exception(&quot;The user with such id doesn't exist&quot;);
 
               existingUser.Username = user.Username;
               existingUser.Email = user.Email;
@@ -403,13 +403,13 @@ SwashBuckle – засіб для полегшення роботи програ
               return Ok(existingUser);
           }
 
-          [HttpDelete("id")]
-          public async Task<IActionResult> DeleteUser(int id)
+          [HttpDelete(&quot;id&quot;)]
+          public async Task&lt;IActionResult&gt; DeleteUser(int id)
           {
-              var deletingUser = await _context.Users.Where(x => x.Id == id).FirstOrDefaultAsync();
+              var deletingUser = await _context.Users.Where(x =&gt; x.Id == id).FirstOrDefaultAsync();
 
               if (deletingUser == null)
-                  throw new Exception("The user with such id doesn't exist");
+                  throw new Exception(&quot;The user with such id doesn't exist&quot;);
 
               _context.Users.Remove(deletingUser);
               await _context.SaveChangesAsync();
