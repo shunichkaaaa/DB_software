@@ -136,39 +136,39 @@
 	<dl>
   <dt id="get"><code>GET</code></a></dt>
   <dd>
-    <p>The <code>GET</code> method requests a representation of the specified resource. Requests using <code>GET</code> should only retrieve data.</p>
+    <p>Метод <code>GET</code> запитує представлення вказаного ресурсу. Запити, що використовують GET, повинні лише отримувати дані.</p>
   </dd>
   <dt id="head"><code>HEAD</code></a></dt>
   <dd>
-    <p>The <code>HEAD</code> method asks for a response identical to a <code>GET</code> request, but without the response body.</p>
+    <p>Метод <code>HEAD</code> запитує відповідь, ідентичну запиту <code>GET</code>, але без тіла відповіді.</p>
   </dd>
   <dt id="post"><code>POST</code></a></dt>
   <dd>
-    <p>The <code>POST</code> method submits an entity to the specified resource, often causing a change in state or side effects on the server.</p>
+    <p>Метод <code>POST</code> надсилає сутність на вказаний ресурс, часто спричинюючи зміну стану або побічних ефектів на сервері.</p>
   </dd>
   <dt id="put"><code>PUT</code></a></dt>
   <dd>
-    <p>The <code>PUT</code> method replaces all current representations of the target resource with the request payload.</p>
+    <p>Метод <code>PUT</code> замінює всі поточні представлення цільового ресурсу на відане навантаження запиту.</p>
   </dd>
   <dt id="delete"><code>DELETE</code></a></dt>
   <dd>
-    <p>The <code>DELETE</code> method deletes the specified resource.</p>
+    <p>Метод <code>DELETE</code> видаляє вказаний ресурс.</p>
   </dd>
   <dt id="connect"><code>CONNECT</code></a></dt>
   <dd>
-    <p>The <code>CONNECT</code> method establishes a tunnel to the server identified by the target resource.</p>
+    <p>Метод <code>CONNECT</code> встановлює тунель до сервера, ідентифікованого цільовим ресурсом.</p>
   </dd>
   <dt id="options"><code>OPTIONS</code></a></dt>
   <dd>
-    <p>The <code>OPTIONS</code> method describes the communication options for the target resource.</p>
+    <p>Метод <code>OPTIONS</code> описує варіанти зв'язку для цільового ресурсу.</p>
   </dd>
   <dt id="trace"><code>TRACE</code></a></dt>
   <dd>
-    <p>The <code>TRACE</code> method performs a message loop-back test along the path to the target resource.</p>
+    <p>Метод <code>TRACE</code> виконує тест зворотного зв'язку повідомлень вздовж шляху до цільового ресурсу.</p>
   </dd>
   <dt id="patch"><code>PATCH</code></a></dt>
   <dd>
-    <p>The <code>PATCH</code> method applies partial modifications to a resource.</p>
+    <p>Метод <code>PATCH</code> застосовує часткові модифікації до ресурсу.</p>
   </dd>
 </dl>
 
