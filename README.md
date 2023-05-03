@@ -39,7 +39,7 @@
 	<thead>
 	<tr>
 	<th>
-	<p style="text-align:center">Factors</p>
+	<p style="text-align:center">Фактори</p>
 	</th>
 	<th>
 	<p style="text-align:center">REST API</p>
@@ -51,44 +51,44 @@
 	</thead>
 	<tbody>
 	<tr>
-	<td>Define</td>
-	<td>Develops APIs to enable client-server interaction.</td>
-	<td>Web application follows REST architecture, providing interoperability between different systems.</td>
+	<td>Визначення</td>
+	<td>Розробляє API, щоб дозволити взаємодію клієнта з сервером.</td>
+	<td>Веб-додаток використовує архітектуру REST, забезпечуючи взаємодію між різними системами.</td>
 	</tr>
 	<tr>
-	<td>Working</td>
-	<td>Uses web services and is based on request and response.</td>
-	<td>Working is completely based on REST applications.</td>
+	<td>Робота</td>
+	<td>Використовує веб-сервіси та базується на запиті та відповіді.</td>
+	<td>Робота повністю базується на додатках REST.</td>
 	</tr>
 	<tr>
-	<td>Nature</td>
-	<td>Highly adaptable and user-friendly</td>
-	<td>Too flexible</td>
+	<td>Характер</td>
+	<td>Дуже пристосований та зручний для користувачів.</td>
+	<td>Занадто гнучкий</td>
 	</tr>
 	<tr>
-	<td>Protocol</td>
-	<td>Strong protocol and is more secure, built-in architecture layers.</td>
-	<td>Has a transport protocol, is less secure as compared to REST.</td>
+	<td>Протокол</td>
+	<td>Міцний та більш безпечний протокол, з вбудованими архітектурними рівнями.</td>
+	<td>Має транспортний протокол, менш безпечний порівняно з REST.</td>
 	</tr>
 	<tr>
-	<td>Architecture</td>
-	<td>Has a cacheable, client-server, stateless, layer system with a uniform interface.</td>
-	<td>All features of REST architecture along with some additional unique features.</td>
+	<td>Архітектура</td>
+	<td>Має кеш, клієнт-сервер, безстанну систему з рівнями та єдиним інтерфейсом.</td>
+	<td>Всі функції архітектури REST разом з деякими додатковими унікальними функціями.</td>
 	</tr>
 	<tr>
-	<td>Format of Data</td>
-	<td>Format of data is based on HTTP.</td>
-	<td>Format of data is based on HTTP, text, and JSON.</td>
+	<td>Формат даних</td>
+	<td>Формат даних базується на HTTP.</td>
+	<td>Формат даних базується на HTTP, тексті та JSON.</td>
 	</tr>
 	<tr>
-	<td>Bandwidth</td>
-	<td>This consumes minimum bandwidth.</td>
-	<td>This consumes less bandwidth.</td>
+	<td>Пропускна здатність</td>
+	<td>Споживає мінімальну пропускну здатність.</td>
+	<td>Споживає невелику пропускну здатність.</td>
 	</tr>
 	<tr>
-	<td>Cache</td>
-	<td>It represents cacheable and non-cacheable data and displaces the non-cacheable data when not required.</td>
-	<td>The client can access cacheable information anytime and anywhere.</td>
+	<td>Кеш</td>
+	<td>Представляє кешовані та некешовані дані та видаляє некешовані дані, коли вони не потрібні.</td>
+	<td>Клієнт може отримувати доступ до кешованої інформації в будь-який час та в будь-якому місці.</td>
 	</tr>
 	</tbody>
 	</table>
