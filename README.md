@@ -602,9 +602,11 @@ exports.deleteUser = (req, res, next) => {
 		<li>
 			<p>Після цього кроку, майже все налаштування рестфул сервісу закінчене, можемо створити просте GET request API</p>
 			<pre><code>
-			@app.get("/api/allusers") – Через знак собачки задається тип регвесту і посилання 
+			@app.get("/api/allusers") – Через знак собачки задається тип регвесту і посилання
+
 			async def get_users():
-				db = DataBase() – зазначене використання бази даних 
+				db = DataBase() – зазначене використання бази даних
+
 				return JSONResponse(db.execute('SELECT * FROM user')) – використання SQL-коду який переводиться зі стрічки у SQL за допомогою методу execute() нашої сутності бази даних.			
 			</code></pre>
 		</li>	
