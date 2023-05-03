@@ -232,28 +232,38 @@ SwashBuckle – засіб для полегшення роботи програ
   <img src="image/section5/Csharp/7_3.jpg"/>
   <p>8.	Спочатку для використання Swagger потрібно налаштувати стартовий файл проекту, для вашої зручності ви можете взяти код з нашого стартового файлу, та змінити декілька полів, якщо хочете дізнатись більше про конфігурацію Swagger завітайте до сайту <a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/">(Посилання)</a></p>
   <pre><code>using Microsoft.OpenApi.Models;
+
   var builder = WebApplication.CreateBuilder(args);
+
   builder.Services.AddControllers();
   builder.Services.AddEndpointsApiExplorer();
   builder.Services.AddSwaggerGen(c =>
   {
       c.SwaggerDoc("v1", new OpenApiInfo { Title = "YourProjectName", Version = "v1" });
   });
+
   var app = builder.Build();
+
   if (app.Environment.IsDevelopment())
   {
       app.UseSwagger();
       app.UseSwaggerUI();
   }
+
   app.UseSwagger();
   app.UseSwaggerUI(c =>
   {
       c.SwaggerEndpoint("/swagger/v1/swagger.json", "YourProjectName V1");
   });
+
   app.UseHttpsRedirection();
+
   app.UseAuthorization();
+
   app.MapControllers();
+
   app.Run();
+
   </code></pre>
   <p>9.	У кінці матимете ось такий файл, можете запустити проект щоб подивитись як працює swagger, нижче на знімках екрану є приклад інтерфейсу, тут ви можете використати апі які ви написали у контролері, повторюючись, ви можете робите це саме у постмані, просто таким чином матимете більш зручний інтерфейс.</p>
   <img src="image/section5/Csharp/9_1.jpg"/>
@@ -278,7 +288,7 @@ SwashBuckle – засіб для полегшення роботи програ
   <p>14. Якщо ви зробили все правильно, у цій папці ви отримаєте список конвертованих об’єктів з вашої бази та контекст бази, який уособлює собою створений прототип бази, який потрібен при використанні EF для доступу до бази. Якщо ви зробили щось не так, Package Manager Console сповістить вас помилкою, яку ви можете скопіювати і знайти в інтернеті.</p>
   <img src="image/section5/Csharp/14.jpg"/>
   <p>15. Після стягування бази, потрібно додати у Program.cs</p>
-  <pre><code>builder.Services.AddDbContext&lt;MydbContext&gt;();</code></pre>
+  <pre><code>builder.Services.AddDbContext&lt;MydbContext&gt;();</pre></code>
   <p>Наприкінці, матимете ось такий стартовий файл: </p>
   <img src="image/section5/Csharp/15.jpg"/>
   <p>16. Для доступу до бази через контролер нам потрібно зробити деякі зміни у ньому. По-перше, почнемо з Dependency injection, та додамо контекст напряму у контролер, на знімку екрану ви можете бачити приклад ін’єкції з логером(необов’язково, використовується для логів у консоль), та самим контекстом</p>
@@ -302,6 +312,7 @@ SwashBuckle – засіб для полегшення роботи програ
   using EduDBlab6.MyDBContext;
   using Microsoft.AspNetCore.Mvc;
   using Microsoft.EntityFrameworkCore;
+
   namespace EduDBlab6.Controllers
   {
       [ApiController]
@@ -309,30 +320,39 @@ SwashBuckle – засіб для полегшення роботи програ
       public class UserController : ControllerBase
       {
           private readonly MydbContext _context;
+
           public UserController(MydbContext context)
           {
               _context = context;
           }
+
           [HttpGet()]
           public async Task<IActionResult> GetUser()
           {
               var users = await _context.Users.ToListAsync();
+
               return Ok(users);
           }
+
           [HttpGet("id")]
           public async Task<IActionResult> GetUserById(int id)
           {
               var user = await _context.Users.Where(x => x.Id == id).FirstOrDefaultAsync();
+
               if (user == null)
                   throw new Exception($"User with id {id} wasn't found in the database");
+
               return Ok(user);
           }
+
           [HttpPost]
           public async Task<IActionResult> AddUser(UserRequestModel user)
           {
               var existingUser = await _context.Users.Where(x => x.Id == user.Id).FirstOrDefaultAsync();
+
               if (existingUser != null)
                   throw new Exception("User is not found");
+
               var newUser = new User()
               {
                   Id = user.Id,
@@ -342,39 +362,52 @@ SwashBuckle – засіб для полегшення роботи програ
                   Avatar = user.Avatar,
                   Role = user.Role
               };
+
               _context.Users.Add(newUser);
               await _context.SaveChangesAsync();
+
               return Ok(newUser);
           }
+
           [HttpPut("update")]
           public async Task<IActionResult> UpdateUser(UserRequestModel user)
           {
               var existingUser = await _context.Users.Where(x => x.Id == user.Id).FirstOrDefaultAsync();
+
               if (existingUser == null)
                   throw new Exception("The user with such id doesn't exist");
+
               existingUser.Username = user.Username;
               existingUser.Email = user.Email;
               existingUser.Password = user.Password;
               existingUser.Avatar = user.Avatar;
               existingUser.Role = user.Role;
+
               _context.Users.Update(existingUser);
               await _context.SaveChangesAsync();
+
               return Ok(existingUser);
           }
+
           [HttpDelete("id")]
           public async Task<IActionResult> DeleteUser(int id)
           {
               var deletingUser = await _context.Users.Where(x => x.Id == id).FirstOrDefaultAsync();
+
               if (deletingUser == null)
                   throw new Exception("The user with such id doesn't exist");
+
               _context.Users.Remove(deletingUser);
               await _context.SaveChangesAsync();
+
               return Ok();
           }
       }
   }
-  </code></pre>
+  </pre></code>
+
   </details>
+
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
@@ -438,6 +471,7 @@ SwashBuckle – засіб для полегшення роботи програ
   <p> Усі інші обробники створюємо по такому самому принципу. Нижче прикріплений весь вміст файлу index.js з папки controllers. </p>
   <pre><code>const AppError = require("../utils/appError");
 const conn = require("../services/db");
+
 exports.getAllUsers = (req, res, next) => {
   conn.query("SELECT * FROM User", function (err, data, fields) {
     if (err) return next(new AppError(err));
@@ -448,6 +482,7 @@ exports.getAllUsers = (req, res, next) => {
     });
   });
 };
+
 exports.createUser = (req, res, next) => {
   if (!req.body) return next(new AppError("No form data found", 404));
   const values = [
@@ -468,6 +503,7 @@ exports.createUser = (req, res, next) => {
     }
   );
 };
+
 exports.getUserById = (req, res, next) => {
   if (!req.params.id) {
     return next(new AppError("No user id found", 404));
@@ -485,6 +521,7 @@ exports.getUserById = (req, res, next) => {
     }
   );
 };
+
 exports.updateUser = (req, res, next) => {
   if (!req.params.id) {
     return next(new AppError("No user id found", 404));
@@ -501,6 +538,7 @@ exports.updateUser = (req, res, next) => {
     }
   );
 };
+
 exports.deleteUser = (req, res, next) => {
   if (!req.params.id) {
     return next(new AppError("No todo id found", 404));
@@ -557,6 +595,8 @@ exports.deleteUser = (req, res, next) => {
   <img src="image/section5/JavaScript/8_3.jpg"/>
   <p> Він визначає формат обєкту, щоб серврев знав, як його передавати.</p>
   </details>
+  
+  
   <details>
      <summary>Розробка REST API на Python 🟢</summary>
      	<p>Посібник по створенню простого рестфул сервісу за допомогою Python бібліотек fastapi та pymysql.<br>
