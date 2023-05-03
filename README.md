@@ -14,6 +14,7 @@
     <li><a href="#section6"> Корисні посилання 🔗</a></li>
   </ol>
   </div>
+  
   <div class="intro">
 	<h2>Вступ</h2>
   
