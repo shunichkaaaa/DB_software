@@ -43,6 +43,8 @@
 	<blockquote>
 	<p style="text-align:justify"><i><strong>Важливо зазначити: Усі веб-сервіси є API, але не всі API є веб-сервісами.</strong></i></p>
 	</blockquote>
+	<p style="text-align:justify">Існують два типи веб-сервісів, які використовуються найчастіше: SOAP та REST.</p>
+	<ul><li style="text-align:justify"><strong>SOAP (Simple Object Access Protocol)</strong> - це протокол, розроблений для обміну даними з безпекою програм, які створені на різних платформах або за допомогою різних мов програмування.</li><li style="text-align:justify"><strong>REST (Representational State Transfer),</strong> - це API, який дотримується набору правил, через які додатки та сервери взаємодіють. Він був спеціально розроблений для роботи з компонентами, такими як файли, об'єкти та медіа-компоненти..&nbsp;</li></ul>
 	<table>
 	<thead>
 	<tr>
