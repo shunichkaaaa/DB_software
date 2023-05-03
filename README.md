@@ -262,6 +262,9 @@ SwashBuckle – засіб для полегшення роботи програ
   app.Run();
 
   </code></pre>
+  
+  ![image](https://user-images.githubusercontent.com/87428068/235870450-908cdc84-9b40-45a7-a201-c48bf252be59.png)
+
   </details>
   
   
