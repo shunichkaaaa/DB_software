@@ -196,8 +196,9 @@
 <!-- Розділ 5 -->
 <div class="section" id="section5">
   <h3>5. Приклади реалізація Restful-сервісу на мовах програмування C#, JavaScript, Python ⚙️</h3>
-
-
+  <details>
+     <summary>Розробка REST API на C# з Entity framework core та Pomelo 🟣</summary>
+  </details>
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
