@@ -177,7 +177,9 @@
 	<li><strong>Firefox</strong></li>
 	<li><strong>Opera</strong></li>
 	<li><strong>Safari</strong></li></ul>
+<blockquote>
 <p><strong>Функціональність методу <code>TRACE</code> зловмисники можуть використати для доступу до інформації в HTTP заголовках, таких як кукі та дані автентифікації, тому цей метод не підтримується в більшості сучасних браузерів.</strong></p>
+</blockquote>
 
 <!-- Розділ 4 -->
 <div class="section" id="section4">
