@@ -264,7 +264,7 @@ SwashBuckle – засіб для полегшення роботи програ
   </code></pre>
   </details>
   
-  
+ 
   <details>
      <summary>Розробка REST API на JavaScript з Node.js, MySQL та Express 🟡</summary>
   <h4>I. Створення програми Node.js</h4>
