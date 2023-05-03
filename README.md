@@ -717,7 +717,6 @@ exports.deleteUser = (req, res, next) => {
 				db.execute(f'DELETE FROM `user` WHERE id={id}')
 				return {'message':f'User with id={id} deleted'}
 		</code></pre>
-
   </details>
 </div>
 
