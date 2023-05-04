@@ -540,8 +540,14 @@ exports.updateUser = (req, res, next) => {
     return next(new AppError("No user id found", 404));
   }
   conn.query(
-    "UPDATE User SET status='completed' WHERE id=?",
-    [req.params.id],
+    "UPDATE User SET username=?, email=?, password=?, Role=? WHERE id=?",
+    [
+      req.body.username,
+      req.body.email,
+      req.body.password,
+      req.body.Role,
+      req.params.id,
+    ],
     function (err, data, fields) {
       if (err) return next(new AppError(err, 500));
       res.status(201).json({
